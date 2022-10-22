@@ -25,12 +25,12 @@ function show (req, res) {
   }
   
   function create(req, res) {
-    Skill.create(req.body);
     console.log(req.body);
+    Skill.create(req.body);
     res.redirect('/skills');
   }
 
   function deleteSkills(req, res) {
-    Skill.deleteOne(req,params.id);
+    Skill.deleteOne(req.params.id);
     res.redirect('/skills');
   }

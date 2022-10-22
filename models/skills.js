@@ -14,7 +14,7 @@ const skills = [
   
   function getOne(id) {
     id = parseInt(id);
-    return skills.find(skills => skills.id === id)
+    return skills.find(skills => skills.id === id);
   }
 
   function getAll() {
@@ -29,6 +29,6 @@ const skills = [
 
   function deleteOne() {
     id = parseInt(id);
-    const idx = todos.findIndex(todo => todo.id === id);
-  todos.splice(idx, 1);
+    const idx = skills.findIndex(skills => skills.id === id);
+  skills.splice(idx, 1);
   }

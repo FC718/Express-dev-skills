@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
+<form action="/skills/<%= s.id %>?_method=DELETE" 
+  class="delete-form"  method="POST">
+  <button type="submit">X</button>
+<%- include('./partials/header')%>
+<h1><%= title %></h1>
     <a href="/skills">To-Do List</a>
-  </body>
-</html>
+<%- include('./partials/footer')%>
+

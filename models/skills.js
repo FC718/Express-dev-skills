@@ -1,12 +1,15 @@
 const skills = [
-    {id: 125223, skills: 'Learn HTML & CSS', done: true},
-    {id: 127904, skills: 'Learn JavaScript', done: false},
-    {id: 139608, skills: 'Apply for jobs', done: false}
+    {id: 125223, skill: 'Learn HTML & CSS', done: true},
+    {id: 127904, skill: 'Learn JavaScript', done: false},
+    {id: 139608, skill: 'Apply for jobs', done: false}
   ];
   
   module.exports = {
     getAll,
-    getOne
+    getOne,
+    create,
+    deleteOne
+
   };
   
   function getOne(id) {
@@ -16,4 +19,16 @@ const skills = [
 
   function getAll() {
     return skills;
+  }
+
+  function create(skill) {
+    skill.id = Date.now() % 1000000;
+    skill.done = false;
+    skills.push(skill);
+  }
+
+  function deleteOne() {
+    id = parseInt(id);
+    const idx = todos.findIndex(todo => todo.id === id);
+  todos.splice(idx, 1);
   }
